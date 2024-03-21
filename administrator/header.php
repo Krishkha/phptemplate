@@ -256,7 +256,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="logout.php">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -287,6 +287,13 @@
         <a class="nav-link " href="topbar.php">
         <i class="bi bi-caret-up-fill"></i>
           <span>Topbar</span>
+        </a>
+      </li><!-- End Topbar -->
+     
+      <li class="nav-item">
+        <a class="nav-link " href="menubar.php">
+        <i class="bi bi-caret-up-fill"></i>
+          <span>Menubar</span>
         </a>
       </li><!-- End Topbar -->
       

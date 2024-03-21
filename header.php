@@ -1,6 +1,8 @@
 <?php  
   include "connection.php"; 
   include "functions/header-functions.php";
+  include "functions/menubar_functions.php";
+
   $contact_email = fetch_topbar('contact_email');
   $contact_number = fetch_topbar('contact_number');
 ?>
@@ -67,16 +69,40 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Impact<span>.</span></h1>
+
+        <?php
+          $logo_text = fetch_menu('logo_text');
+          $menu_home = fetch_menu('menu_home');
+          $menu_home_link = fetch_menu('menu_home_link');
+          $menu_about = fetch_menu('menu_about');
+          $menu_about_link = fetch_menu('menu_about_link');
+          $menu_services = fetch_menu('menu_services');
+          $menu_services_link = fetch_menu('menu_services_link');
+          $menu_portfolio = fetch_menu('menu_portfolio');
+          $menu_portfolio_link = fetch_menu('menu_portfolio_link');
+          $menu_team = fetch_menu('menu_team');
+          $menu_team_link = fetch_menu('menu_team_link');
+          $menu_blog = fetch_menu('menu_blog');
+          $menu_blog_link = fetch_menu('menu_blog_link');
+          $menu_contact = fetch_menu('menu_contact');
+          $menu_contact_link = fetch_menu('menu_contact_link');
+
+        ?>
+
+
+
+
+
+        <h1><?php echo $logo_text ?><span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="<?php echo $menu_home_link ?>"><?php echo $menu_home ?></a></li>
+          <li><a href="<?php echo $menu_about_link ?>"><?php echo $menu_about ?></a></li>
+          <li><a href="<?php echo $menu_services_link ?>"><?php echo $menu_services ?></a></li>
+          <li><a href="<?php echo $menu_portfolio_link ?>"><?php echo $menu_portfolio ?></a></li>
+          <li><a href="<?php echo $menu_team_link ?>"><?php echo $menu_team ?></a></li>
+          <li><a href="<?php echo $menu_blog_link ?>"><?php echo $menu_blog ?></a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -94,7 +120,7 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="<?php echo $menu_contact_link ?>"><?php echo $menu_contact ?></a></li>
         </ul>
       </nav><!-- .navbar -->
 
