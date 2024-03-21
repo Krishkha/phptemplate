@@ -1,1 +1,5 @@
 https://github.com/Krishkha/phptemplate.git
+
+git add .  ----> all file add 
+git commit -m "your message" -------->  save all file
+git pust origin HEAD:master --------->  push all file in github with updated files
