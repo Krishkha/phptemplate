@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Check if the user is not logged in, redirect to login page
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// If user is logged in, you can display the content of index page here
+?>
 <?php include "header.php"; ?>
 
 
