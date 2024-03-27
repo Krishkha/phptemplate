@@ -220,6 +220,8 @@ if (!isset($_SESSION['username'])) {
 
         </li><!-- End Messages Nav -->
 
+        <button type="button" class="btn btn-primary" style="margin: 0px 10px; "><a href="insert_form.php" style="color: white;">Form</a></button>
+
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">

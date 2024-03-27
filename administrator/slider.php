@@ -20,11 +20,11 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
 <main id="main" class="main">
 
   <div class="pagetitle">
-    <h1>Topbar</h1>
+    <h1>Slider</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active">Topbar</li>
+        <li class="breadcrumb-item active">Slider</li>
       </ol>
     </nav>
   </div>
