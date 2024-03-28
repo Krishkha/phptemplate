@@ -17,6 +17,10 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
 }
 ?>
 
+<!-- delete and edit function JSX -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="delete_edit_fun.js"></script>
+
 <main id="main" class="main">
 
   <div class="pagetitle">

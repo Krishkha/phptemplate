@@ -16,6 +16,10 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
   echo '<b>' . $_GET['message'] . '</b>';
 }
 ?>
+<!-- delete and edit function JSX -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="delete_edit_fun.js"></script>
+
 
 <main id="main" class="main">
 
@@ -57,7 +61,7 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
                     <td> <?php echo $value['field_value']; ?> </td>
                     <td> <?php echo $value['create_date']; ?> </td>
                     <td>
-                      <a href="edit.php?id=<?php echo $value['id']; ?>">Edit</a> |
+                      <a href="edit_form.php?id=<?php echo $value['id']; ?>">Edit</a> |
                       <a href="#" onclick="delete_record(<?php echo $value['id']; ?>);return false;">Delete</a>
                     </td>
                   </tr>
