@@ -1,6 +1,6 @@
 <?php
     include "connection.php";
-    $id = $_GET['id'];
+    $id = $_GET['id'] ?? 'Default value';
     $query = "SELECT * FROM menubar WHERE id = $id";
     $executeQuery = $con->query($query);
     $row = $executeQuery->fetch_assoc();
