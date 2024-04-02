@@ -1,4 +1,3 @@
-<?php include "header.php" ?>
 <?php
 include "connection.php";
 $query = "SELECT * FROM genneral_settings where section_type = 'topbar'";
@@ -16,9 +15,24 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
   echo '<b>' . $_GET['message'] . '</b>';
 }
 ?>
+<?php include "header.php" ?>
 <!-- delete and edit function JSX -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="delete_edit_fun.js"></script>
+<script>
+//   function delete_record(id){
+    
+//     $.ajax({
+//         url: "delete_fun_genneral.php?id="+id,
+//         type: "GET",
+//         success: function(response){
+//             $("#response").html(response);
+//             $("#record_"+id).remove();
+//         }
+//     });
+//     return false;
+// }
+</script>
 
 
 <main id="main" class="main">
@@ -61,7 +75,7 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
                     <td> <?php echo $value['field_value']; ?> </td>
                     <td> <?php echo $value['create_date']; ?> </td>
                     <td>
-                      <a href="edit_form.php?id=<?php echo $value['id']; ?>">Edit</a> |
+                      <a href="edit_form_genneral.php?id=<?php echo $value['id']; ?>">Edit</a> |
                       <a href="#" onclick="delete_record(<?php echo $value['id']; ?>);return false;">Delete</a>
                     </td>
                   </tr>

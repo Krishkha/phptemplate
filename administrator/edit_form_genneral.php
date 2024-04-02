@@ -1,13 +1,31 @@
-<?php include "connection.php" ?>
-<?php include "header.php" ?>
+<?php
+    include "connection.php";
+    $id = $_GET['id'];
+    $query = "SELECT * FROM genneral_settings WHERE id = $id";
+    $executeQuery = $con->query($query);
+    $row = $executeQuery->fetch_assoc();
+?>
+
+
+<?php include "header.php";?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/delete_edit_fun.js"></script>
+
+
 
 <main id="main" class="main">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Insertion Form</h5>
+      <h5 class="card-title">Edit Form</h5>
 
       <!-- Multi Columns Form -->
-      <form class="row g-3" action="insert_form_fun.php" method="post">
+      <form class="row g-3" action="../administrator/edit_fun_genneral.php" method="post">
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">ID</label>
+          <input type="text" class="form-control" id="inputCity" name="id">
+        </div>
+
         <div class="col-md-6">
           <label for="inputCity" class="form-label">Section Type</label>
           <input type="text" class="form-control" id="inputCity" name="section_type">
@@ -36,4 +54,5 @@
 
 </main>
 
-<?php include "footer.php" ?>
+
+<?php include "footer.php";?>

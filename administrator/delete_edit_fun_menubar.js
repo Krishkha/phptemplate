@@ -30,7 +30,7 @@ $(document).ready(function () {
         var id = $("#id").val();
 
         $.ajax({
-            url: 'edit_fun_genneral.php',
+            url: 'edit_fun_menubar.php',
             data: {
                 section_type: section_type,
                 field_value: field_value,

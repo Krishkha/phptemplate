@@ -61,7 +61,7 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
                     <td> <?php echo $value['field_value']; ?> </td>
                     <td> <?php echo $value['create_date']; ?> </td>
                     <td>
-                      <a href="edit.php?id=<?php echo $value['id']; ?>">Edit</a> |
+                    <a href="edit_form_genneral.php?id=<?php echo $value['id']; ?>">Edit</a> |
                       <a href="#" onclick="delete_record(<?php echo $value['id']; ?>);return false;">Delete</a>
                     </td>
                   </tr>
