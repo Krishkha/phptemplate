@@ -39,11 +39,12 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
 
   <div class="pagetitle">
     <h1>Topbar</h1>
-    <nav>
+    <nav style="display: flex; justify-content: space-between;">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
         <li class="breadcrumb-item active">Topbar</li>
       </ol>
+      <button type="button" onclick="showForm(0,1)" id="button" class="btn btn-primary" style="margin: 0px 10px; "><a href="#form" style="color: white;">Form</a></button>
     </nav>
   </div>
 
@@ -84,5 +85,42 @@ if (isset($_GET['message']) && !empty($_GET['message'])) {
             </table>
           </div>
         </div>
+</main>
+
+
+
+<main  class="topbarForm" id="main">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Insertion Form</h5>
+
+      <!-- Multi Columns Form -->
+      <form class="row g-3" id="form" action="insert_form_fun.php" method="post">
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label" >Section Type</label>
+          <input type="text" class="form-control" id="inputCity" name="section_type" value="topbar">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Field Type</label>
+          <input type="text" class="form-control" id="inputCity" name="field_type">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Field Value</label>
+          <input type="text" class="form-control" id="inputCity" name="field_value">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Create Date</label>
+          <input type="datetime-local" class="form-control" id="inputCity" name="create_date">
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form><!-- End Multi Columns Form -->
+
 </main>
 <?php include "footer.php" ?>

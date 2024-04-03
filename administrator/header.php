@@ -220,7 +220,6 @@ if (!isset($_SESSION['username'])) {
 
         </li><!-- End Messages Nav -->
 
-        <button type="button" class="btn btn-primary" style="margin: 0px 10px; "><a href="insert_form.php" style="color: white;">Form</a></button>
 
         <li class="nav-item dropdown pe-3">
 
@@ -239,7 +238,7 @@ if (!isset($_SESSION['username'])) {
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -249,7 +248,7 @@ if (!isset($_SESSION['username'])) {
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
                 <i class="bi bi-gear"></i>
                 <span>Account Settings</span>
               </a>
